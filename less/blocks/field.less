@@ -1,0 +1,49 @@
+.field {
+  .container();
+  border: 0;
+}
+
+.field__title {
+  .title();
+  margin-bottom: 16px;
+  // padding-top: 20px;
+  text-align: center;
+  line-height: 26px;
+}
+
+.field__label {
+  margin-bottom: 0;
+}
+
+.field__label-name {
+  .description();
+  line-height: inherit;
+
+  &--style-change {
+    .title-line();
+  }
+
+}
+
+.field__input {
+  .title-line();
+  padding: 17px 22px;
+  border: 0;
+  background-color: @smoky-white;
+
+  &--textarea {
+    box-sizing: border-box;
+    width: 100%;
+    margin-bottom: 18px;
+    resize: none;
+  }
+
+  &::placeholder {
+    color: @black-color;
+  }
+
+  &:focus::placeholder {
+    color: transparent;
+  }
+
+}
