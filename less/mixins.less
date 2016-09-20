@@ -1,0 +1,40 @@
+//container
+.container() {
+  width: 280px;
+  margin: 0 auto;
+
+  @media @tablet-widths {
+    width: 640px;
+  }
+
+  @media @desktop-widths {
+    width: 960px;
+  }
+}
+
+//text
+.accentuation() {
+  font-size: 21px; //16-21px
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.title() {
+  font-size: 18px; //14-18px
+  line-height: 24px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.title-line() {
+  font-size: 18px; //14-18px
+  font-weight: bold;
+  text-transform: none;
+}
+
+.description() {
+  font-size: 14px; //10-14px
+  line-height: 21px;
+  color: @text-alt-color;
+  text-transform: uppercase;
+}

@@ -18,10 +18,10 @@
         <button class="main-nav__toogle" type="button">Открыть меню</button>
         <div class="main-nav__wrapper">
           <ul class="main-nav__list">
-            <li class="main-nav__item"><a class="main-nav__link" href="">Главная</a></li>
-            <li class="main-nav__item"><a class="main-nav__link" href="">Фото и видео</a></li>
+            <li class="main-nav__item"><a class="main-nav__link" href="../">Главная</a></li>
+            <li class="main-nav__item"><a class="main-nav__link" href="photo.html">Фото и видео</a></li>
             <li class="main-nav__item  main-nav__item--active"><a class="main-nav__link">Форма отзыва</a></li>
-            <li class="main-nav__item"><a class="main-nav__link" href="">HTML Academy</a></li>
+            <li class="main-nav__item"><a class="main-nav__link" href="https://htmlacademy.ru/">HTML Academy</a></li>
           </ul>
         </div>
       </nav>
@@ -50,12 +50,19 @@
 
           <fieldset class="field">
             <legend class="field__title">Представьтесь, пожалуйста:</legend>
-            <label class="field__label" for="first-name">Имя:</label>
-            <input class="field__input  field__input--text" type="text" id="first-name" name="first-name">
-            <label class="field__label" for="middle-name">Фамилия:</label>
-            <input class="field__input  field__input--text" type="text" id="middle-name" name="middle-name">
-            <label class="field__label" for="last-name">Отчество:</label>
-            <input class="field__input  fieldform__input--text" type="text" id="last-name" name="last-name">
+            <label class="field__label">
+              <span class="field__label-name">Имя:</span>
+              <input class="field__input  field__input--text" type="text" name="first-name">
+            </label>
+            <label class="field__label">
+              <span class="field__label-name">Фамилия:</span>
+              <input class="field__input  field__input--text" type="text" name="middle-name">
+            </label>
+            <label class="field__label">
+              <span class="field__label-name">Отчество:</span>
+              <input class="field__input  field__input--text" type="text" name="last-name">
+            </label>
+
           </fieldset>
 
         </div>
@@ -64,10 +71,15 @@
 
           <fieldset class="field">
             <legend class="field__title">Контактная информация:</legend>
-            <label class="field__label" for="phone">Контактный телефон:</label>
-            <input class="field__input  field__input--phone" type="tel" id="phone" name="phone" placeholder="Введите телефон">
-            <label class="field__label" for="email">Электронная почта</label>
-            <input class="field__input field__input--email" type="email" id="email" name="email" placeholder="Введите e-mail">
+            <label class="field__label">
+              <span class="field__label-name">Контактный телефон:</span>
+              <input class="field__input  field__input--phone" type="tel" name="phone" placeholder="Введите телефон">
+            </label>
+            <label class="field__label">
+              <span class="field__label-name">Электронная почта:</span>
+              <input class="field__input  field__input--email" type="email" name="email" placeholder="Введите e-mail">
+            </label>
+
           </fieldset>
 
         </div>
@@ -76,12 +88,18 @@
 
           <fieldset class="field">
             <legend class="field__title">Ваше общее впечатление:</legend>
-            <input class="field__input  field__input--radio" type="radio" id="positively" name="positively">
-            <label class="field__label" for="positively">Скорее положительное</label>
-            <input class="field__input  field__input--radio" type="radio" id="negatively" name="negatively">
-            <label class="field__label" for="negatively">Скорее отрицательное</label>
-            <input class="field__input  field__input--radio" type="radio" id="difficult" name="difficult">
-            <label class="field__label" for="difficult">Затрудняюсь ответить</label>
+            <label class="field__label">
+              <input class="field__input  field__input--radio" type="radio" name="impression">
+              <span class="field__label-name  field__label-name--style-change">Скорее положительное</span>
+            </label>
+            <label class="field__label  field__label--style-change">
+              <input class="field__input  field__input--radio" type="radio" name="impression">
+              <span class="field__label-name  field__label-name--style-change">Скорее отрицательное</span>
+            </label>
+            <label class="field__label">
+              <input class="field__input  field__input--radio" type="radio" name="impression">
+              <span class="field__label-name  field__label-name--style-change">Затрудняюсь ответить</span>
+            </label>
           </fieldset>
 
         </div>
@@ -90,23 +108,32 @@
 
           <fieldset class="field">
             <legend class="field__title">Посещенные достопримечательности:</legend>
-            <input class="field__input  field__input--checkbox" type="checkbox" id="devils-bridge" name="devils-bridge">
-            <label class="field__label" for="devils-bridge">Мост Дьявола</label>
-            <input class="field__input  field__input--checkbox" type="checkbox" id="slide-park" name="slide-park">
-            <label class="field__label" for="slide-park">Слайд-парк</label>
-            <input class="field__input  field__input--checkbox" type="checkbox" id="mountain-bell" name="mountain-bell">
-            <label class="field__label" for="mountain-bell">Гора-Колокол</label>
-            <input class="field__input  field__input--checkbox" type="checkbox" id="red-rocks" name="red-rocks">
-            <label class="field__label" for="red-rocks">Красные скалы</label>
+            <label class="field__label">
+              <input class="field__input  field__input--checkbox" type="checkbox" name="devils-bridge">
+              <span class="field__label-name  field__label-name--style-change">Мост Дьявола</span>
+            </label>
+
+            <label class="field__label">
+              <input class="field__input  field__input--checkbox" type="checkbox" name="slide-park">
+              <span class="field__label-name  field__label-name--style-change">Слайд-парк</span>
+            </label>
+            <label class="field__label">
+              <input class="field__input  field__input--checkbox" type="checkbox" name="mountain-bell">
+              <span class="field__label-name  field__label-name--style-change">Гора-Колокол</span>
+            </label>
+            <label class="field__label">
+              <input class="field__input  field__input--checkbox" type="checkbox" name="red-rocks">
+              <span class="field__label-name  field__label-name--style-change">Красные скалы</span>
+            </label>
           </fieldset>
 
         </div>
 
         <div class="review-form__item">
 
-          <fieldset class="field__field">
+          <fieldset class="field">
             <legend class="field__title">Опишите свои эмоции:</legend>
-            <textarea class="field__input  field__input--textarea" name="emotions" rows="5" cols="20" placeholder="Опишите подробно все свои восторги"></textarea>
+            <textarea class="field__input  field__input--textarea" name="emotions" rows="5" placeholder="Опишите подробно все свои восторги"></textarea>
           </fieldset>
 
         </div>
@@ -128,11 +155,11 @@
           <span class="social-links">
             <a class="social-link  social-link--tw" href="">Мы в Твиттере</a>
             <a class="social-link  social-link--fb" href="">Мы в Фейсбуке</a>
-            <a class="social-link  social-link--yt" href="">МЫ в Ютубе</a>
+            <a class="social-link  social-link--yt" href="">Мы в Ютубе</a>
           </span>
         </p>
         <p class="page-footer__copyright">
-          Разработанно
+          Разработано
           <a class="page-footer__copyright-link" href="">HTML Academy</a>
         </p>
       </div>
