@@ -1,3 +1,8 @@
+.advantages {
+  font-size: 0; //временно или нет. Пока не не будет другого решения проблем с "артефактами"
+  line-height: 0; //временно или нет. Пока не не будет другого решения проблем с "артефактами"
+}
+
 .advantages__item {
   padding: 28px 0;
   background-color: @grey-color;
@@ -10,7 +15,7 @@
 }
 
 .advantages__heading {
-  padding: 46px 0 42px;
+  padding: 40px 0;
   background-color: @base-color;
 }
 
@@ -58,5 +63,153 @@
 .advantages__cell {
   padding-left: 50px;
   margin-bottom: 27px;
+}
+
+.advantages__value br {
+  display: none;
+}
+
+@media @tablet-widths {
+  .advantages {
+    .clearfix();
+
+    width: 100%;
+    min-height: 206px;
+    padding: 0;
+  }
+
+  .advantages__item {
+    display: inline-block;
+    width: 33.33333%;
+    min-height: 168px;
+    margin: 0;
+    padding: 45px 0 42px;
+
+    vertical-align: top;
+
+    &--style-change {
+      width: 100%;
+      padding: 0;
+    }
+
+  }
+
+  .advantages__heading {
+    width: 33.33333%;
+    padding: 44px 0;
+
+    &--first {
+      float: left;
+    }
+
+    &--second {
+      float: right;
+    }
+  }
+
+  .advantages__title, .advantages__number {
+    width: 150px;
+  }
+
+  .advantages__descriotion {
+    width: 168px;
+  }
+
+  .advantages__descriotion br {
+    display: none;
+  }
+
+  .advantages__title {
+    .accentuation();
+  }
+
+  .advantages__number {
+    margin-bottom: 21px;
+  }
+
+
+  .advantages__img {
+    // временные размеры для сетки
+    width: 66.66666%;
+    height: 256px;
+  }
+
+  .advantages__list {
+    width: 100%;
+  }
+
+  .advantages__cell {
+    display: inline-block;
+    width: 33.33333%;
+    padding: 127px 0 27px;
+
+    text-align: center;
+    vertical-align: top;
+
+    &:nth-child(2) {
+      // в 5ом уроке флексом исправлю
+      float: right;
+    }
+
+  }
+
+  .advantages__field {
+    .accentuation();
+  }
+
+  .advantages__value {
+    width: 165px;
+    margin: 0 auto;
+  }
+
+}
+
+@media @desktop-widths {
+  .advantages {
+    font-size: 0;
+    line-height: 0;
+  }
+
+  .advantages__item {
+  padding: 45px 0 64px;
+
+  &--style-change {
+    padding: 0;
+  }
+
+}
+
+  .advantages__heading {
+    width: 400px;
+    padding: 52px 0 57px;
+  }
+
+  .advantages__descriotion {
+    width: 264px;
+  }
+
+  .advantages__img {
+    // временные размеры для сетки
+    width: 800px;
+    height: 256px;
+
+  }
+
+  .advantages__cell {
+    padding: 128px 0 46px;
+  }
+
+  .advantages__field {
+    padding: 0 0 2px;
+  }
+
+  .advantages__value {
+    width: 284px;
+  }
+
+  .advantages__value br {
+    display: inline;
+  }
+
 }
 

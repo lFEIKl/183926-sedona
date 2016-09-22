@@ -1,3 +1,7 @@
+.page-headline {
+  background-color: @white-color;
+}
+
 .page-headline__logo {
   background: @white-color url("@{path-img}/bg-back-mobile@1x.jpg") no-repeat;
   background-size: cover;
@@ -6,7 +10,9 @@
 .page-headline__title {
   .container();
   .title();
+  width: 260px;
   padding: 40px 0 28px;
+
   text-align: center;
   line-height: 26px;
 }
@@ -14,7 +20,35 @@
 .page-headline__description {
   .container();
   .description();
-  padding-bottom: 17px;
+  padding-bottom: 28px;
+
   text-align: center;
   line-height: inherit;
+}
+
+@media @tablet-widths {
+
+  .page-headline {
+    font-size: 0;
+  }
+
+  .page-headline__title {
+    .accentuation();
+    width: 490px;
+    padding-top: 50px;
+  }
+
+  .page-headline__description {
+    padding-bottom: 50px;
+  }
+
+}
+
+@media @desktop-widths {
+
+  .page-headline {
+    width: 1200px;
+
+  }
+
 }
