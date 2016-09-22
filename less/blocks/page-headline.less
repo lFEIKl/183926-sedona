@@ -15,6 +15,10 @@
 
   text-align: center;
   line-height: 26px;
+
+  &--style-change {
+    padding-bottom: 26px;
+  }
 }
 
 .page-headline__description {
@@ -24,6 +28,12 @@
 
   text-align: center;
   line-height: inherit;
+
+  &--style-change {
+    padding-bottom: 16px;
+
+    line-height: 24px;
+  }
 }
 
 @media @tablet-widths {
@@ -36,19 +46,33 @@
     .accentuation();
     width: 490px;
     padding-top: 50px;
+
+    &--style-change {
+      .accentuation-2x();
+      padding: 73px 0 30px;
+    }
   }
 
   .page-headline__description {
     padding-bottom: 50px;
-  }
 
+    &--style-change {
+      width: 436px;
+    }
+
+  }
 }
 
 @media @desktop-widths {
-
   .page-headline {
     width: 1200px;
 
+  }
+
+  .page-headline__title {
+    &--style-change {
+      padding-top: 110px;
+    }
   }
 
 }
