@@ -1,5 +1,8 @@
 .video {
-  padding: 15px 0 40px;
+  padding: 35px 0 40px;
+
+  background-color: @white-color;
+
   text-align: center;
 }
 
@@ -12,6 +15,30 @@
 .video__description {
   .container();
   .description();
+  width: 240px;
   margin-bottom: 36px;
+
   line-height: 24px;
+}
+
+@media @tablet-widths {
+  .video {
+    padding: 35px 0 30px;
+  }
+
+  .video__title {
+    .accentuation-2x();
+    margin-bottom: 31px;
+  }
+
+  .video__description {
+    width: 416px;
+    margin-bottom: 73px;
+  }
+}
+
+@media @desktop-widths {
+  .video {
+    padding: 35px 0 78px;
+  }
 }

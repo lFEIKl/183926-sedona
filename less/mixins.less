@@ -4,7 +4,7 @@
   margin: 0 auto;
 
   @media @tablet-widths {
-    width: 640px;
+    width: 648px;
   }
 
   @media @desktop-widths {
@@ -12,9 +12,26 @@
   }
 }
 
+.clearfix() {
+  &::after {
+    content: "";
+
+    display: table;
+    clear: both;
+  }
+}
+
 //text
+.accentuation-2x() {
+  font-size: 30px; //16-21px
+  line-height: 26px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
 .accentuation() {
   font-size: 21px; //16-21px
+  line-height: 26px;
   font-weight: 700;
   text-transform: uppercase;
 }
@@ -28,6 +45,7 @@
 
 .title-line() {
   font-size: 18px; //14-18px
+  line-height: 26px;
   font-weight: bold;
   text-transform: none;
 }

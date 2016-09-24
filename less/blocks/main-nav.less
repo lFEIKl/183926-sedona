@@ -1,12 +1,15 @@
 .main-nav__list {
   margin: 0;
   padding: 0;
+
   list-style: none;
 }
 
 .main-nav__item {
   padding: 16px 0 14px;
+
   background-color: @base-color;
+
   text-align: center;
 }
 
@@ -14,4 +17,48 @@
   .title();
   color: @white-color;
   text-decoration: none;
+}
+
+@media @tablet-widths {
+
+  .main-nav {
+    min-height: 55px;
+
+    font-size: 0;
+  }
+
+  .main-nav__item {
+    display: inline-block;
+    min-width: 20%;
+    padding: 0;
+
+    background-color: @white-color;
+
+    vertical-align: top;
+  }
+
+  .main-nav__item:nth-child(2) {
+    margin-right: 20%;
+  }
+
+  .main-nav__link {
+    display: block;
+    padding: 14px 0 17px;
+
+    font-size: 14px;
+    line-height: 26px;
+    color: @black-color;
+    vertical-align: middle;
+  }
+
+  .main-nav__toggle {
+    display: none;
+  }
+
+}
+
+@media @desktop-widths {
+   .main-nav {
+    width: 1200px;
+   }
 }

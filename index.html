@@ -3,29 +3,40 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
 
     <!-- page-header -->
     <header class="page-header">
-      <div class="page-header__logo">
-        <a href=""><img class="page-header__img-logo" src="http://placehold.it/150x100" width="" height="" alt="Sedona"></a>
-      </div>
 
       <!-- main-nav -->
       <nav class="main-nav  main-nav--closed  main-nav--nojs">
-        <button class="main-nav__toogle" type="button">Открыть меню</button>
         <div class="main-nav__wrapper">
           <ul class="main-nav__list">
-            <li class="main-nav__item  main-nav__item--active"><a class="main-nav__link">Главная</a></li>
-            <li class="main-nav__item"><a class="main-nav__link" href="photo.html">Фото и видео</a></li>
-            <li class="main-nav__item"><a class="main-nav__link" href="form.html">Форма отзыва</a></li>
-            <li class="main-nav__item"><a class="main-nav__link" href="https://htmlacademy.ru">HTML Academy</a></li>
+            <li class="main-nav__item  main-nav__item--active">
+              <a class="main-nav__link">Главная</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="photo.html">Фото и видео</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="form.html">Форма отзыва</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="https://htmlacademy.ru">HTML Academy</a>
+            </li>
           </ul>
         </div>
+        <button class="main-nav__toggle" type="button">Открыть меню</button>
       </nav>
       <!-- end main-nav -->
+
+      <div class="page-header__logo">
+        <a href="index.html"><img class="page-header__img-logo" src="http://placehold.it/150x100" width="" height="" alt="Sedona"></a>
+      </div>
+
     </header>
     <!-- end page-header -->
 
@@ -37,7 +48,7 @@
         <div class="page-headline__logo">
           <img class="page-headline__img-logo" src="http://placehold.it/150x100" width="" height="" alt="Sedona">
         </div>
-        <h2 class="page-headline__title">СЕДОНА — небольшой<br> городок в Аризоне, заслуживающий большего!</h2>
+        <h2 class="page-headline__title">СЕДОНА — небольшой городок в Аризоне, заслуживающий большего!</h2>
         <p class="page-headline__description">Рассмотрим 5 причин, по которым Седона круче чем гранд каньон!</p>
       </section>
       <!-- end page-headline -->
@@ -46,7 +57,7 @@
     <section class="advantages">
 
       <section class="advantages__item  advantages__item--style-change">
-        <header class="advantages__heading">
+        <header class="advantages__heading  advantages__heading--first">
           <h3 class="advantages__title  advantages__title--style-change">Настоящий городок</h3>
           <p class="advantages__number  advantages__number--style-change">&mdash; №1 &mdash;</p>
           <p class="advantages__descriotion  advantages__descriotion--style-change">Седона не аттракцион для туристов, там течет своя жизнь</p>
@@ -59,7 +70,7 @@
           </li>
           <li class="advantages__cell  advantages__cell--gift">
             <h3 class="advantages__field">Сувениры</h3>
-            <p class="advantages__value">Не только китайского, но и местного производства!</p>
+            <p class="advantages__value">Не только китайского,<br> но и местного производства!</p>
           </li>
           <li class="advantages__cell  advantages__cell--burger">
             <h3 class="advantages__field">Еда</h3>
@@ -69,7 +80,7 @@
       </section>
 
       <section class="advantages__item  advantages__item--style-change">
-        <header class="advantages__heading">
+        <header class="advantages__heading  advantages__heading--second">
           <h3 class="advantages__title  advantages__title--style-change">Там есть мост дьявола</h3>
           <p class="advantages__number  advantages__number--style-change">&mdash; №2 &mdash;</p>
           <p class="advantages__descriotion  advantages__descriotion--style-change">Да, по нему можно пройти! Если, конечно, вы осмелитесь</p>
@@ -80,7 +91,7 @@
       <div class="advantages__item">
         <h3 class="advantages__title">Небольшая площадь</h3>
         <p class="advantages__number">&mdash; №3 &mdash;</p>
-        <p class="advantages__descriotion">Все достопримечательности находятся очень близко</p>
+        <p class="advantages__descriotion">Все достопримеча&shyтельности находятся очень близко</p>
       </div>
 
       <div class="advantages__item">
@@ -102,7 +113,7 @@
     <section class="hotels">
       <header class="hotels__heading">
         <h2 class="hotels__title">Заинтересовались?</h2>
-        <p class="hotels__description">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предположения гостиниц в Седоне</p>
+        <p class="hotels__description">Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предположения гостиниц в Седоне</p>
         <a class="btn" href="hotels.html">Найти гостиницу</a>
       </header>
       <div class="hotels__wrap-map">
@@ -127,7 +138,7 @@
         </p>
         <p class="page-footer__copyright">
           Разработано
-          <a class="page-footer__copyright-link" href="">HTML Academy</a>
+          <a class="page-footer__copyright-link" href="https://htmlacademy.ru">HTML Academy</a>
         </p>
       </div>
     </footer>

@@ -1,5 +1,7 @@
 .page-footer {
   padding: 5px 0;
+
+  background-color: @white-color;
 }
 
 .page-footer__wrapper {
@@ -7,11 +9,49 @@
   text-align: center;
 }
 
-.page-footer__hashtag {
+.page-footer__hashtag,  {
   .accentuation();
 }
 
-.page-footer__copyright {
+
+.page-footer__copyright, .page-footer__social {
   .description();
   line-height: inherit;
+}
+
+@media @tablet-widths {
+  .page-footer {
+    padding: 20px 0;
+  }
+
+  .page-footer__wrapper {
+    width: 100%;
+    margin: 0;
+
+    font-size: 0;
+  }
+
+  .page-footer__hashtag, .page-footer__social, .page-footer__copyright {
+    display: inline-block;
+    width: 33.33333%;
+
+    vertical-align: middle;
+  }
+}
+
+@media @desktop-widths {
+  .page-footer {
+    box-sizing: border-box;
+    width: 1200px;
+    margin: 0 auto;
+    padding: 25px 0;
+  }
+
+  .page-footer__copyright {
+    box-sizing: border-box;
+    padding-right: 45px;
+
+    text-align: right;
+  }
+
 }

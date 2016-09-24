@@ -1,22 +1,33 @@
 .field {
   .container();
+  padding: 0;
+
   border: 0;
 }
 
 .field__title {
   .title();
-  margin-bottom: 16px;
+  margin-bottom: 20px;
   // padding-top: 20px;
+
   text-align: center;
   line-height: 26px;
 }
 
 .field__label {
+  display: block;
+  margin-bottom: 20px;
+}
+
+.field__label:last-child {
   margin-bottom: 0;
 }
 
 .field__label-name {
   .description();
+  display: inline-block;
+  margin-bottom: 10px;
+
   line-height: inherit;
 
   &--style-change {
@@ -27,9 +38,14 @@
 
 .field__input {
   .title-line();
-  padding: 17px 22px;
+  padding: 16px 21px;
   border: 0;
-  background-color: @smoky-white;
+  background-color: @smoky-white-color;
+
+  &--text {
+    box-sizing: border-box;
+    width: 192px;
+  }
 
   &--textarea {
     box-sizing: border-box;
@@ -46,4 +62,10 @@
     color: transparent;
   }
 
+}
+
+@media @tablet-widths {
+  .field__title {
+    .accentuation();
+  }
 }
