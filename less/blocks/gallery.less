@@ -1,15 +1,17 @@
 .gallery {
   background-color: @white-color;
+
+  line-height: 0;
 }
 
 .gallery__item {
   .container();
-  margin: 0 auto;
+
   padding: 22px 0;
 }
 
 .gallery__img {
-  margin-bottom: 7px;
+  margin-bottom: 15px;
 }
 
 .gallery__title, .gallery__likes {
@@ -27,4 +29,94 @@
   font-size: inherit;
   line-height: 24px;
   color: @text-alt-color;
+}
+
+@media @tablet-widths {
+
+  //Можно ли обойтись без обертки? Сделать другим способом
+  .gallery__wrap {
+    .container();
+
+    display: flex;
+
+    flex-wrap: wrap;
+  }
+
+  .gallery__item {
+    width: 324px;
+    margin: 0;
+    padding: 0;
+
+
+    &--wide {
+      width: 648px;
+    }
+
+  }
+
+  .gallery__img {
+    margin-bottom: 0;
+  }
+
+  .gallery__description {
+    display: flex;
+    height: 80px;
+    padding: 0 20px;
+
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .gallery__title {
+    padding: 10px 0 0;
+  }
+
+  .gallery__author {
+    padding: 0 0 10px;
+  }
+
+  .gallery__likes {
+    text-align: right;
+  }
+
+}
+
+@media @desktop-widths {
+
+  .gallery__wrap {
+    width: 1200px;
+  }
+
+  .gallery__item {
+    position: relative;
+    width: 400px;
+
+    &--wide {
+      width: 1200px;
+    }
+
+  }
+
+  .gallery__description {
+    box-sizing: border-box;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+
+    background-color: @black-color-03;
+  }
+
+  .gallery__title, .gallery__author, .gallery__likes {
+    color: @white-color;
+  }
+
+  .gallery__author {
+
+  }
+
+  .gallery__likes {
+
+  }
+
 }
