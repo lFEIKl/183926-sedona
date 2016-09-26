@@ -5,20 +5,44 @@
 }
 
 .review-form__item {
-  padding: 18px 0 26px;
+  padding: 19px 0 25px;
 
   border-top: 1px solid @grey-color;
+
+  &:last-child {
+    padding: 0;
+
+    border-top: none;
+  }
+
 }
 
 @media @tablet-widths {
   .review-form {
+    display: flex;
     padding-bottom: 60px;
+
+    justify-content: center;
+    flex-wrap: wrap;
   }
 
   .review-form__item {
     padding: 25px 0 26px;
 
     border-top: 0;
+
+    &--first {
+      width: 50%;
+      order: -1;
+    }
+
+    &--second {
+      width: 50%;
+
+      align-self: flex-end;
+
+    }
+
   }
 }
 

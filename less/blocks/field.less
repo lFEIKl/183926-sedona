@@ -1,5 +1,6 @@
 .field {
   .container();
+
   padding: 0;
 
   border: 0;
@@ -8,15 +9,24 @@
 .field__title {
   .title();
   margin-bottom: 20px;
-  // padding-top: 20px;
 
   text-align: center;
   line-height: 26px;
 }
 
 .field__label {
-  display: block;
+  display: flex;
+  width: 280px;
+  margin: auto;
   margin-bottom: 20px;
+
+  align-items: center;
+
+  &--contacts {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
 }
 
 .field__label:last-child {
@@ -25,12 +35,15 @@
 
 .field__label-name {
   .description();
-  display: inline-block;
-  margin-bottom: 10px;
+  margin-right: 19px;
 
   line-height: inherit;
 
-  &--style-change {
+  &--contacts {
+    padding: 0 0 6px 21px;
+  }
+
+  &--radio, &--checkbox {
     .title-line();
   }
 
@@ -39,12 +52,22 @@
 .field__input {
   .title-line();
   padding: 16px 21px;
+
   border: 0;
   background-color: @smoky-white-color;
 
   &--text {
+    width: 100%;
+  }
+
+  &--phone {
     box-sizing: border-box;
-    width: 192px;
+    width: 280px;
+  }
+
+  &--email {
+    box-sizing: border-box;
+    width: 280px;
   }
 
   &--textarea {
@@ -64,8 +87,191 @@
 
 }
 
+.field__note {
+  display: none;
+}
+
 @media @tablet-widths {
+  .field {
+
+    &--text, &--radio {
+      width: 100%;
+      margin: 0;
+    }
+
+    &--text {
+      box-sizing: border-box;
+      margin-bottom: 18px;
+
+      border-left: 1px solid @grey-color;
+    }
+
+    &--contacts {
+      margin-bottom: 2px;
+    }
+
+    &--checkbox {
+      margin-bottom: 10px;
+    }
+
+    &--textarea {
+      margin-bottom: 5px;
+    }
+
+    &--last { //что-то непонятно, как расположить флекс-элементы
+      // display: flex;
+      // justify-content: space-between;
+    }
+
+  }
+
   .field__title {
     .accentuation();
+
+    &--text, &--radio {
+      margin-bottom: 58px;
+    }
+
+    &--contacts {
+      margin-bottom: 25px;
+    }
+
+    &--checkbox {
+      width: 280px;
+      margin-bottom: 35px;
+    }
+
+    &--textarea {
+      margin-bottom: 57px;
+    }
+
   }
+
+  .field__span {
+
+    &--text {
+      display: none;
+    }
+
+  }
+
+  .field__wrap {
+    display: flex;
+    width: 460px;
+    margin: 0 auto;
+
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .field__label {
+
+    &--text {
+      width: 266px;
+    }
+
+    &--contacts {
+      width: 100%;
+      margin-bottom: 24px;
+    }
+
+    &--checkbox {
+      width: 200px;
+      margin: 0;
+    }
+
+  }
+
+  .field__input {
+
+    &--phone, &--email {
+      width: 100%;
+    }
+
+  }
+
+  .field__note {
+    .description();
+
+    display: inline;
+
+    line-height: 26px;
+  }
+
+  .field__span {
+    display: inline;
+  }
+
+}
+
+@media @desktop-widths {
+
+  .field__title {
+
+    &--contacts {
+      margin-bottom: 75px;
+    }
+
+  }
+
+  .field__wrap {
+    display: flex;
+    width: 100%;
+    margin: auto;
+
+    // flex-wrap: wrap;
+    // justify-content: space-between;
+  }
+
+  .field__label {
+
+    &--contacts { //или нужно сделать флексом?
+      box-sizing: border-box;
+      display: inline-block;
+      width: 478px;
+      margin-bottom: 0;
+
+      vertical-align: top;
+    }
+
+    &--checkbox {
+      width: auto;
+      margin: 0;
+    }
+
+  }
+
+.field__label-name {
+  .description();
+
+  &--contacts {
+    padding: 0;
+    margin-right: 17px;
+  }
+
+  &--checkbox {
+      margin-right: 0;
+    }
+
+}
+
+  .field__span {
+
+    &--text {
+      display: inline;
+    }
+
+    &--contacts {
+      display: none;
+    }
+  }
+
+  .field__input {
+
+    &--phone, &--email {
+      width: 315px;
+    }
+
+  }
+
 }

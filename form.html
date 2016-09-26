@@ -46,87 +46,59 @@
       <!-- end page-headline -->
 
       <!-- review-form -->
-      <div class="review-form">
-        <form method="post">
+      <form class="review-form" method="post">
 
-        <div class="review-form__item">
+        <div class="review-form__item review-form__item--second">
 
-          <fieldset class="field">
-            <legend class="field__title">Представьтесь, пожалуйста:</legend>
-            <label class="field__label">
+          <fieldset class="field  field--text">
+            <legend class="field__title  field__title--text">Представьтесь<span class="field__span  field__span--text">, пожалуйста</span>:</legend>
+            <label class="field__label  field__label--text">
               <span class="field__label-name">Имя:</span>
               <input class="field__input  field__input--text" type="text" name="first-name">
             </label>
-            <label class="field__label">
+            <label class="field__label  field__label--text">
               <span class="field__label-name">Фамилия:</span>
               <input class="field__input  field__input--text" type="text" name="middle-name">
             </label>
-            <label class="field__label">
+            <label class="field__label  field__label--text">
               <span class="field__label-name">Отчество:</span>
               <input class="field__input  field__input--text" type="text" name="last-name">
             </label>
-
           </fieldset>
 
         </div>
 
         <div class="review-form__item">
 
-          <fieldset class="field">
-            <legend class="field__title">Контактная информация:</legend>
-            <label class="field__label">
-              <span class="field__label-name">Контактный телефон:</span>
+          <fieldset class="field  field--contacts">
+            <legend class="field__title  field__title--contacts">Контактная информация:</legend>
+            <label class="field__label  field__label--contacts">
+              <span class="field__label-name  field__label-name--contacts"><span class="field__span  field__span--contacts">Контактный </span>телефон:</span>
               <input class="field__input  field__input--phone" type="tel" name="phone" placeholder="Введите телефон">
             </label>
-            <label class="field__label">
-              <span class="field__label-name">Электронная почта:</span>
+            <label class="field__label  field__label--contacts">
+              <span class="field__label-name  field__label-name--contacts">Электронная почта:</span>
               <input class="field__input  field__input--email" type="email" name="email" placeholder="Введите e-mail">
             </label>
-
           </fieldset>
 
         </div>
 
-        <div class="review-form__item">
+        <div class="review-form__item  review-form__item--first">
 
-          <fieldset class="field">
-            <legend class="field__title">Ваше общее впечатление:</legend>
-            <label class="field__label">
+          <fieldset class="field  field--radio">
+            <legend class="field__title  field__title--radio">Ваше общее впечатление:</legend>
+            <label class="field__label  field__label--radio">
               <input class="field__input  field__input--radio" type="radio" name="impression">
-              <span class="field__label-name  field__label-name--style-change">Скорее положительное</span>
+              <span class="field__label-name  field__label-name--radio">Скорее положительное</span>
             </label>
-            <label class="field__label  field__label--style-change">
+            <label class="field__label  field__label--radio">
               <input class="field__input  field__input--radio" type="radio" name="impression">
-              <span class="field__label-name  field__label-name--style-change">Скорее отрицательное</span>
+              <span class="field__label-name  field__label-name--radio">Скорее отрицательное</span>
             </label>
-            <label class="field__label">
+            <label class="field__label  field__label--radio">
               <input class="field__input  field__input--radio" type="radio" name="impression">
-              <span class="field__label-name  field__label-name--style-change">Затрудняюсь ответить</span>
-            </label>
-          </fieldset>
-
-        </div>
-
-        <div class="review-form__item">
-
-          <fieldset class="field">
-            <legend class="field__title">Посещенные достопримечательности:</legend>
-            <label class="field__label">
-              <input class="field__input  field__input--checkbox" type="checkbox" name="devils-bridge">
-              <span class="field__label-name  field__label-name--style-change">Мост Дьявола</span>
-            </label>
-
-            <label class="field__label">
-              <input class="field__input  field__input--checkbox" type="checkbox" name="slide-park">
-              <span class="field__label-name  field__label-name--style-change">Слайд-парк</span>
-            </label>
-            <label class="field__label">
-              <input class="field__input  field__input--checkbox" type="checkbox" name="mountain-bell">
-              <span class="field__label-name  field__label-name--style-change">Гора-Колокол</span>
-            </label>
-            <label class="field__label">
-              <input class="field__input  field__input--checkbox" type="checkbox" name="red-rocks">
-              <span class="field__label-name  field__label-name--style-change">Красные скалы</span>
+              <span class="field__label-name  field__label-name--radio">Затрудняюсь ответить</span>
             </label>
           </fieldset>
 
@@ -134,17 +106,49 @@
 
         <div class="review-form__item">
 
-          <fieldset class="field">
-            <legend class="field__title">Опишите свои эмоции:</legend>
+          <fieldset class="field  field--checkbox">
+            <legend class="field__title  field__title--checkbox">Посещенные достопримечательности:</legend>
+            <div class="field__wrap">
+              <label class="field__label  field__label--checkbox">
+                <input class="field__input  field__input--checkbox" type="checkbox" name="devils-bridge">
+                <span class="field__label-name  field__label-name--checkbox">Мост Дьявола</span>
+              </label>
+              <label class="field__label  field__label--checkbox">
+                <input class="field__input  field__input--checkbox" type="checkbox" name="slide-park">
+                <span class="field__label-name  field__label-name--checkbox">Слайд-парк</span>
+              </label>
+              <label class="field__label  field__label--checkbox">
+                <input class="field__input  field__input--checkbox" type="checkbox" name="mountain-bell">
+                <span class="field__label-name  field__label-name--checkbox">Гора-Колокол</span>
+              </label>
+              <label class="field__label  field__label--checkbox">
+                <input class="field__input  field__input--checkbox" type="checkbox" name="red-rocks">
+                <span class="field__label-name  field__label-name--checkbox">Красные скалы</span>
+              </label>
+            </div>
+          </fieldset>
+
+        </div>
+
+        <div class="review-form__item">
+
+          <fieldset class="field  field--textarea">
+            <legend class="field__title  field__title--textarea">Опишите свои эмоции:</legend>
             <textarea class="field__input  field__input--textarea" name="emotions" rows="5" placeholder="Опишите подробно все свои восторги"></textarea>
           </fieldset>
 
         </div>
 
-        <button class="btn">Отправить отзыв</button>
+        <div class="review-form__item">
 
-        </form>
-      </div>
+          <fieldset class="field  field--last">
+            <button class="btn">Отправить отзыв</button>
+            <span class="field__note">*-обязательные поля</span>
+          </fieldset>
+
+        </div>
+
+      </form>
       <!-- end review-form -->
 
     </main>
@@ -168,6 +172,23 @@
       </div>
     </footer>
     <!-- end page-footer -->
+
+    <script>
+      var navMain = document.querySelector('.main-nav');
+      var navToggle = document.querySelector('.main-nav__toggle');
+
+      navMain.classList.remove('main-nav--nojs');
+
+      navToggle.addEventListener('click', function() {
+        if (navMain.classList.contains('main-nav--closed')) {
+          navMain.classList.remove('main-nav--closed');
+          navMain.classList.add('main-nav--opened');
+        } else {
+          navMain.classList.add('main-nav--closed');
+          navMain.classList.remove('main-nav--opened');
+        }
+      });
+    </script>
 
   </body>
 </html>
