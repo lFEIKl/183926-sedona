@@ -1,17 +1,29 @@
 .advantages {
+  background-color: @grey-color;
+
   font-size: 0; //временно или нет. Пока не не будет другого решения проблем с "артефактами"
   line-height: 0; //временно или нет. Пока не не будет другого решения проблем с "артефактами"
 }
 
 .advantages__item {
-  padding: 28px 0;
+  .container();
+
+  padding: 28px 0 27px;
+
   background-color: @grey-color;
+  border-bottom: 1px solid #d6d6d6;
 
   &--style-change {
+    width: 100%;
     padding: 0;
+
     background-color: @white-color;
 
     text-align: center; //выравниваем img
+  }
+
+  &:last-child, &--style-change {
+    border-bottom: 0;
   }
 
 }
@@ -19,6 +31,16 @@
 .advantages__heading {
   padding: 40px 0;
   background-color: @base-color;
+
+  &--first {
+    padding: 55px 0 40px;
+
+    background-image: url("@{path-img}/bg-triangle.svg");
+    background-repeat: no-repeat;
+    background-position: 0 -22px;
+    background-size: 100% 37px;
+  }
+
 }
 
 .advantages__title, .advantages__descriotion, .advantages__number, .advantages__list {
@@ -57,14 +79,40 @@
 }
 
 .advantages__list {
-  padding: 10px 0 8px;
+  padding: 20px 0 24px;
+
   text-align: left;
   list-style: none;
 }
 
 .advantages__cell {
   padding-left: 50px;
-  margin-bottom: 27px;
+  margin-bottom: 13px;
+
+  &--house {
+    background: url("@{path-img}/icon-house.svg") no-repeat 0 13px;
+    background-size: 38px;
+  }
+
+  &--gift {
+    background: url("@{path-img}/icon-gift.svg") no-repeat 5px 4px;
+    background-size: 32px;
+  }
+
+  &--burger {
+    background: url("@{path-img}/icon-burger.svg") no-repeat 0 11px;
+    background-size: 37px;
+  }
+
+}
+
+.advantages__field {
+  padding-top: 17px;
+  margin: 0 0 14px;
+}
+
+.advantages__value {
+  margin: 0;
 }
 
 .advantages__value br {
@@ -81,17 +129,24 @@
   }
 
   .advantages__item {
+    box-sizing: border-box;
     display: inline-block;
     width: 33.33333%;
     min-height: 168px;
     margin: 0;
     padding: 45px 0 42px;
 
+    border-right: 2px solid #efefef;
+    border-left: 2px solid #efefef;
+    border-bottom: 0;
+
     vertical-align: top;
 
     &--style-change {
       width: 100%;
       padding: 0;
+
+      border: 0;
     }
 
   }
@@ -102,6 +157,8 @@
 
     &--first {
       float: left;
+
+      background-image: none;
     }
 
     &--second {
@@ -138,12 +195,13 @@
 
   .advantages__list {
     width: 100%;
+    padding-bottom: 21px;
   }
 
   .advantages__cell {
     display: inline-block;
     width: 33.33333%;
-    padding: 127px 0 27px;
+    padding: 122px 0 27px;
 
     text-align: center;
     vertical-align: top;
@@ -153,10 +211,27 @@
       float: right;
     }
 
+    &--house {
+      background-position: 50% 40px;
+      background-size: 75px;
+    }
+
+    &--gift {
+      background-position: 50% 36px;
+      background-size: 64px;
+    }
+
+    &--burger {
+      background-position: 50% 42px;
+      background-size: 78px;
+    }
+
   }
 
   .advantages__field {
     .accentuation();
+
+    margin-bottom: 21px;
   }
 
   .advantages__value {
@@ -197,12 +272,16 @@
 
   }
 
+  .advantages__list {
+    padding-bottom: 23px;
+  }
+
   .advantages__cell {
-    padding: 128px 0 46px;
+    padding: 138px 0 46px;
   }
 
   .advantages__field {
-    padding: 0 0 2px;
+    padding: 0 0 1px;
   }
 
   .advantages__value {

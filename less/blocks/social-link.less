@@ -2,7 +2,7 @@
   display: inline-block;
   width: 46px;
   height: 48px;
-  margin-right: 6px;
+  margin-right: 3px;
 
   background-color: @base-color;
 
@@ -14,13 +14,20 @@
     margin-right: 0;
   }
 
-  &--tw {
-    background: @base-color url("@{path-img}/icon-twitter.svg") no-repeat 50% 50%;
+  &:hover {
+    background-color: @base-color-hvr;
   }
-  &--fb {
-    background: @base-color url("@{path-img}/icon-facebook.svg") no-repeat 50% 50%;
+
+  &:active {
+    background-color: @base-color-down;
   }
-  &--youtube {
-    background: @base-color url("@{path-img}/icon-youtube.svg") no-repeat 50% 50%;
-  }
+
+}
+
+.social-link__icon {
+  fill: @white-color;
+}
+
+.social-link:active .social-link__icon {
+  fill: @white-color-03;
 }

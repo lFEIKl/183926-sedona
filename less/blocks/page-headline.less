@@ -3,11 +3,12 @@
 }
 
 .page-headline__logo {
-  padding: 50px 18px 68px;
+  padding: 51px 47px 68px;
 
-  background: @white-color no-repeat center;
-  background-image: url("@{path-img}/bg-back-mobile@1x.jpg");
-  background-size: cover;
+  background-color: @white-color;
+  background: url("@{path-img}/bg-intro-triangle-mobile.svg") no-repeat 0 100%,
+              url("@{path-img}/bg-back-mobile@1x.jpg") no-repeat center;
+  background-size: 100%, cover;
 
   text-align: center;
   line-height: 0;
@@ -22,7 +23,7 @@
   .container();
   .title();
   width: 260px;
-  padding: 40px 0 28px;
+  padding: 38px 0 28px;
 
   text-align: center;
   line-height: 26px;
@@ -51,7 +52,8 @@
        (max-width: 767px) and (min-resolution: 1.5dppx) {
 
   .page-headline__logo {
-    background-image: url("@{path-img}/bg-back-mobile@2x.jpg");
+    background-image: url("@{path-img}/bg-intro-triangle-mobile.svg"),
+                      url("@{path-img}/bg-back-mobile@2x.jpg");
   }
 
 }
@@ -63,7 +65,16 @@
   }
 
   .page-headline__logo {
-    background-image: url("@{path-img}/bg-back-tablet@1x.jpg");
+    padding: 93px 47px 116px;
+
+    background: url("@{path-img}/bg-intro-triangle-tablet.svg") no-repeat 0 100%,
+                url("@{path-img}/bg-back-tablet@1x.jpg") no-repeat center;
+    background-size: 100%, cover;
+
+    &--index {
+      padding: 75px 18px 92px;
+    }
+
   }
 
   .page-headline__title {
@@ -73,7 +84,7 @@
 
     &--style-change {
       .accentuation-2x();
-      padding: 73px 0 30px;
+      padding: 74px 0 31px;
     }
   }
 
@@ -91,7 +102,8 @@
        (min-width: 768px) and (min-resolution: 1.5dppx) {
 
   .page-headline__logo {
-    background-image: url("@{path-img}/bg-back-tablet@2x.jpg");
+    background-image: url("@{path-img}/bg-intro-triangle-tablet.svg"),
+                      url("@{path-img}/bg-back-tablet@2x.jpg");
   }
 
 }
@@ -103,7 +115,16 @@
   }
 
   .page-headline__logo {
-    background-image: url("@{path-img}/bg-back-desktop@1x.jpg");
+    padding: 100px 47px 120px;
+
+    background: url("@{path-img}/bg-intro-triangle-desktop.svg") no-repeat 0 100%,
+                url("@{path-img}/bg-back-desktop@1x.jpg") no-repeat center;
+    background-size: 100%, cover;
+
+    &--index {
+      padding: 77px 18px 90px;
+    }
+
   }
 
   .page-headline__title {
@@ -113,7 +134,10 @@
   }
 
   .page-headline__description {
-    padding-bottom: 70px;
+
+    &--style-change {
+      padding-bottom: 35px;
+    }
   }
 
 }
@@ -122,7 +146,8 @@
        (min-width: 1200px) and (min-resolution: 1.5dppx) {
 
   .page-headline__logo {
-    background-image: url("@{path-img}/bg-back-desktop@2x.jpg");
+    background-image: url("@{path-img}/bg-intro-triangle-desktop.svg"),
+                      url("@{path-img}/bg-back-desktop@2x.jpg");
   }
 
 }

@@ -1,7 +1,7 @@
 .page-footer {
   padding: 5px 0;
 
-  background-color: @white-color;
+  background-color: #fefefe;
 }
 
 .page-footer__wrapper {
@@ -14,22 +14,45 @@
   .accentuation();
 }
 
+.page-footer__social {
+  margin: 35px 0 40px;
+}
+
 .page-footer__copyright, .page-footer__social {
   .description();
 
   line-height: inherit;
 }
 
+.page-footer__copyright-link {
+  display: inline-block;
 
+  line-height: 12px;
+  vertical-align: middle;
+}
+
+.page-footer__copyright-icon {
+  fill: @black-color;
+
+  &:hover {
+    fill: @base-color;
+  }
+
+  &:active {
+    fill: #b2b2b2;
+  }
+
+}
 
 @media @tablet-widths {
   .page-footer {
-    padding: 20px 0;
+    padding: 0;
   }
 
   .page-footer__wrapper {
     width: 100%;
     margin: 0;
+    padding: 25px 0;
 
     font-size: 0;
   }
@@ -37,6 +60,7 @@
   .page-footer__hashtag, .page-footer__social, .page-footer__copyright {
     display: inline-block;
     width: 33.33333%;
+    margin: 0;
 
     vertical-align: middle;
   }
@@ -47,12 +71,11 @@
     box-sizing: border-box;
     width: 1200px;
     margin: 0 auto;
-    padding: 25px 0;
   }
 
   .page-footer__copyright {
     box-sizing: border-box;
-    padding-right: 45px;
+    padding-right: 36px;
 
     text-align: right;
   }

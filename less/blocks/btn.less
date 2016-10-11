@@ -1,18 +1,59 @@
 .btn {
   .accentuation();
+
+  box-sizing: border-box;
+  display: block;
   width: 280px;
   height: 58px;
+  padding: 15px 0;
+  margin: 0 auto;
 
   border: 0;
   background-color: @base-color;
+
   color: @white-color;
   text-decoration: none;
+
+  &--small {
+    width: 180px;
+  }
+
+  &--outline {
+    margin-top: 54px;
+
+  }
+
+  &:hover {
+    background-color: @base-color-hvr;
+  }
+
+  &:active {
+    background-color: @base-color-down;
+
+    color: @white-color-03;
+  }
+
+  &:disabled {
+    background-color: #e5e5e5;
+  }
+
 }
 
 @media @tablet-widths {
 
   .btn {
-    width: 324px;
+    width: 458px;
+    margin: 0 auto;
+
+    &--form {
+      width: 324px;
+      margin: 0;
+    }
+
+    &--small {
+      width: 272px;
+    }
+
   }
 
 }
@@ -20,7 +61,10 @@
 @media @desktop-widths {
 
   .btn {
-    width: 480px;
+
+    &--form {
+      width: 478px;
+    }
   }
 
 }
