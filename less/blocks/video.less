@@ -1,5 +1,5 @@
 .video {
-  padding: 35px 0 40px;
+  padding: 35px 0 115px;
 
   background-color: @white-color;
 
@@ -21,9 +21,99 @@
   line-height: 24px;
 }
 
+.video__player {
+  position: relative;
+
+  width: 320px;
+  margin: 0 auto;
+
+  line-height: 0;
+}
+
+.video__controls {
+  position: absolute;
+  bottom: 0;
+  left: 20px;
+
+  width: 280px;
+  margin: 0 auto;
+  padding: 20px 0;
+
+  background: @black-color-06;
+
+  line-height: 0;
+
+  &:after {
+    content: "";
+
+    position: absolute;
+    bottom: -66px;
+
+    display: block;
+    width: 280px;
+    height: 66px;
+
+    background: @smoky-white-color;
+  }
+
+}
+
+.video__icon {
+  position: absolute;
+  top: 68px;
+
+  fill: @controls;
+
+  z-index: 1;
+
+  &--subtitles {
+    right: 74px;
+  }
+
+  &--fullscreen {
+    right: 23px;
+  }
+
+  &:hover {
+    fill: @controls-hvr;
+  }
+
+  &:active {
+    fill: @controls-down;
+  }
+
+}
+
+.video__scale {
+  position: relative;
+
+  display: inline-block;
+  width: 235px;
+  height: 3px;
+
+  background: @white-color-02;
+
+  z-index: 1;
+}
+
+.video__slider {
+  position: absolute;
+  top: -3px;
+  left: 34px;
+
+  display: block;
+  width: 10px;
+  height: 10px;
+
+  background: @white-color;
+  border-radius: 50%;
+
+  z-index: 2;
+}
+
 @media @tablet-widths {
   .video {
-    padding: 68px 0 30px;
+    padding: 68px 0 50px;
   }
 
   .video__title {
@@ -35,10 +125,75 @@
     width: 416px;
     margin-bottom: 73px;
   }
+
+  .video__player {
+    width: 648px;
+  }
+
+  .video__controls {
+    position: absolute;
+    left: 0;
+
+    width: 100%;
+    padding: 37px 0;
+
+    text-align: left;
+
+    &:after {
+      display: none;
+    }
+  }
+
+  .video__icon {
+    position: static;
+
+    fill: @white-color;
+
+    &--replay {
+      margin: 0 0 0 33px;
+    }
+
+    &--subtitles {
+      margin: 0 0 0 39px;
+    }
+
+    &--fullscreen {
+      margin: 0 0 0 27px;
+    }
+
+    &:hover {
+      fill: @white-color-07;
+    }
+
+    &:active {
+      fill: @white-color-03;
+    }
+  }
+
+  .video__scale {
+    top: -8px;
+
+    width: 389px;
+    margin: 0 0 0 36px;
+  }
+
+  .video__slider {
+    left: 112px;
+  }
+
+
 }
 
 @media @desktop-widths {
   .video {
-    padding: 70px 0 78px;
+    padding: 70px 0 85px;
+  }
+
+  .video__player {
+    width: 800px;
+  }
+
+  .video__scale {
+    width: 540px;
   }
 }
