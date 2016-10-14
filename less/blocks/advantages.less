@@ -29,11 +29,11 @@
 }
 
 .advantages__heading {
-  padding: 40px 0;
+  padding: 40px 0 0;
   background-color: @base-color;
 
   &--first {
-    padding: 55px 0 40px;
+    padding: 55px 0 0;
 
     background-image: url("@{path-img}/bg-triangle.svg");
     background-repeat: no-repeat;
@@ -41,6 +41,10 @@
     background-size: 100% 37px;
   }
 
+}
+
+.advantages__wrap-desc {
+  margin-bottom: 40px;
 }
 
 .advantages__title, .advantages__descriotion, .advantages__number, .advantages__list {
@@ -152,18 +156,22 @@
   }
 
   .advantages__heading {
-    width: 33.33333%;
-    padding: 44px 0;
+    display: flex;
+    padding: 0;
 
     &--first {
-      float: left;
-
       background-image: none;
     }
 
     &--second {
-      float: right;
+      flex-direction: row-reverse;
     }
+  }
+
+  .advantages__wrap-desc {
+    width: 33.33333%;
+    padding: 45px 0 0;
+    margin-bottom: 0;
   }
 
   .advantages__title, .advantages__number {
@@ -188,9 +196,15 @@
 
 
   .advantages__img {
-    // временные размеры для сетки
     width: 66.66666%;
-    height: 256px;
+
+    background-color: @base-color;
+
+    text-align: right;
+
+    &--second {
+      text-align: left;
+    }
   }
 
   .advantages__list {
@@ -207,7 +221,6 @@
     vertical-align: top;
 
     &:nth-child(2) {
-      // в 5ом уроке флексом исправлю
       float: right;
     }
 
@@ -257,6 +270,11 @@
 }
 
   .advantages__heading {
+    // width: 400px;
+    // padding: 52px 0 57px;
+  }
+
+  .advantages__wrap-desc {
     width: 400px;
     padding: 52px 0 57px;
   }
@@ -269,6 +287,10 @@
     // временные размеры для сетки
     width: 800px;
     height: 256px;
+    overflow: hidden;
+    & img {
+      overflow: hidden;
+    }
 
   }
 
