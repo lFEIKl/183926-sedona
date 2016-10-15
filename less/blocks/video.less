@@ -1,5 +1,5 @@
 .video {
-  padding: 35px 0 115px;
+  padding: 35px 0 50px;
 
   background-color: @white-color;
 
@@ -22,56 +22,82 @@
 }
 
 .video__player {
-  position: relative;
-
+  display: flex;
   width: 320px;
+  min-height: 267px;
   margin: 0 auto;
+
+  align-items: flex-end;
+
+  background-color: @white-color;
+  background: url("@{path-img}/video-mobile@1x.jpg") no-repeat;
+  background-size: 100%;
 
   line-height: 0;
 }
 
 .video__controls {
-  position: absolute;
-  bottom: 0;
-  left: 20px;
-
+  display: flex;
   width: 280px;
   margin: 0 auto;
-  padding: 20px 0;
+
+  flex-wrap: wrap;
+  justify-content: flex-end;
 
   background: @black-color-06;
+}
 
-  line-height: 0;
+.video__scale {
+  position: relative;
+  width: 100%;
+  padding: 20px 0;
 
-  &:after {
+
+  text-align: center;
+
+  &::before {
     content: "";
+    display: inline-block;
+    width: 235px;
+    height: 3px;
 
-    position: absolute;
-    bottom: -66px;
+    background: @white-color-02;
 
-    display: block;
-    width: 280px;
-    height: 66px;
-
-    background: @smoky-white-color;
+    z-index: 1;
   }
 
+  &::after {
+    content: "";
+    position: absolute;
+    top: 18px;
+    left: 57px;
+
+    display: block;
+    width: 10px;
+    height: 10px;
+
+    background: @white-color;
+    border-radius: 50%;
+
+    z-index: 2;
+  }
 }
 
 .video__icon {
-  position: absolute;
-  top: 68px;
+  background: @smoky-white-color;
 
   fill: @controls;
 
-  z-index: 1;
+  &--replay {
+    padding: 23px 130px 23px 23px;
+  }
 
   &--subtitles {
-    right: 74px;
+    padding: 23px 32px 23px 0;
   }
 
   &--fullscreen {
-    right: 23px;
+    padding: 23px 23px 23px 0;
   }
 
   &:hover {
@@ -84,31 +110,12 @@
 
 }
 
-.video__scale {
-  position: relative;
+@media (max-width: 767px) and (min-resolution: 144dpi),
+       (max-width: 767px) and (min-resolution: 1.5dppx) {
 
-  display: inline-block;
-  width: 235px;
-  height: 3px;
-
-  background: @white-color-02;
-
-  z-index: 1;
-}
-
-.video__slider {
-  position: absolute;
-  top: -3px;
-  left: 34px;
-
-  display: block;
-  width: 10px;
-  height: 10px;
-
-  background: @white-color;
-  border-radius: 50%;
-
-  z-index: 2;
+  .video__player {
+    background-image: url("@{path-img}/video-mobile@2x.jpg");
+  }
 }
 
 @media @tablet-widths {
@@ -128,37 +135,41 @@
 
   .video__player {
     width: 648px;
+    min-height: 500px;
+
+    background: url("@{path-img}/video-tablet@1x.jpg") no-repeat;
+    background-size: cover;
   }
 
   .video__controls {
-    position: absolute;
-    left: 0;
-
     width: 100%;
-    padding: 37px 0;
+    padding: 24px 16px;
 
-    text-align: left;
+    justify-content: space-around;
+    align-items: center;
+  }
 
-    &:after {
-      display: none;
+  .video__scale {
+    width: auto;
+
+    &::before {
+      width: 389px;
+    }
+
+    &::after {
+      left: 120px;
     }
   }
 
   .video__icon {
-    position: static;
+    padding: 0;
+
+    background: transparent;
 
     fill: @white-color;
 
     &--replay {
-      margin: 0 0 0 33px;
-    }
-
-    &--subtitles {
-      margin: 0 0 0 39px;
-    }
-
-    &--fullscreen {
-      margin: 0 0 0 27px;
+      order: -1;
     }
 
     &:hover {
@@ -170,30 +181,43 @@
     }
   }
 
-  .video__scale {
-    top: -8px;
+}
 
-    width: 389px;
-    margin: 0 0 0 36px;
+@media (min-width: 768px) and (min-resolution: 144dpi),
+       (min-width: 768px) and (min-resolution: 1.5dppx) {
+
+  .video__player {
+    background-image: url("@{path-img}/video-tablet@2x.jpg");
   }
-
-  .video__slider {
-    left: 112px;
-  }
-
-
 }
 
 @media @desktop-widths {
   .video {
-    padding: 70px 0 85px;
+    padding: 70px 0 87px;
   }
 
   .video__player {
     width: 800px;
+
+    background-image: url("@{path-img}/video-desktop@1x.jpg");
   }
 
   .video__scale {
-    width: 540px;
+
+    &::before {
+      width: 544px;
+    }
+
+    &::after {
+      left: 114px;
+    }
+  }
+}
+
+@media (min-width: 1200px) and (min-resolution: 144dpi),
+       (min-width: 1200px) and (min-resolution: 1.5dppx) {
+
+  .video__player {
+    background-image: url("@{path-img}/video-desktop@2x.jpg");
   }
 }

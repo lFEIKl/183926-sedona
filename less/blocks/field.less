@@ -87,7 +87,9 @@
 
     position: relative;
     display: flex;
+
     align-items: center;
+    flex-wrap: wrap;
   }
 
 }
@@ -126,7 +128,7 @@
 }
 
 .field__input--radio + .field__label-name--radio:active::after {
-  background-color: #a4a4a4;
+  opacity: 0.3;
 }
 
 .field__input--checkbox ~ .field__label-name--checkbox::before {
@@ -166,7 +168,7 @@
 }
 
 .field__label-name--checkbox:active ~ .field__tick-icon {
-  fill: #a4a4a4;
+  opacity: 0.3;
 }
 
 .field__input {
