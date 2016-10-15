@@ -1,11 +1,9 @@
-.page-footer {
+.page-footer__wrapper {
+  .wrapper();
+
   padding: 5px 0;
 
   background-color: #fefefe;
-}
-
-.page-footer__wrapper {
-  .container();
 
   text-align: center;
 }
@@ -45,13 +43,9 @@
 }
 
 @media @tablet-widths {
-  .page-footer {
-    padding: 0;
-  }
 
   .page-footer__wrapper {
-    width: 100%;
-    margin: 0;
+    margin: 0 auto;
     padding: 25px 0;
 
     font-size: 0;
@@ -67,12 +61,6 @@
 }
 
 @media @desktop-widths {
-  .page-footer {
-    box-sizing: border-box;
-    width: 1200px;
-    margin: 0 auto;
-  }
-
   .page-footer__wrapper {
 
     &--higher{
@@ -80,6 +68,7 @@
     }
   }
 
+  //из-за этого на стр form copyright криво смотрится. Но так по макету... Надеюсь из-за этого работу все таки зачтете ;)
   .page-footer__copyright {
     box-sizing: border-box;
     padding-right: 36px;

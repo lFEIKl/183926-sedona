@@ -28,6 +28,7 @@
 
   &--checkbox {
     margin-bottom: 24px;
+    align-items: flex-start;
   }
 
   &--phone, &--email {
@@ -86,18 +87,19 @@
     .title-line();
 
     position: relative;
-    display: flex;
 
-    align-items: center;
-    flex-wrap: wrap;
+    padding: 15px 0 15px 78px;
   }
 
 }
 
 .field__input--radio + .field__label-name--radio::before {
   content: "";
-  position: relative;
-  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  display: block;
   width: 56px;
   height: 56px;
   margin-right: 22px;
@@ -123,7 +125,7 @@
   width: 22px;
   height: 22px;
 
-  background-color: @black-color;
+  background-color: #333333;
   border-radius: 50%;
 }
 
@@ -133,7 +135,10 @@
 
 .field__input--checkbox ~ .field__label-name--checkbox::before {
   content: "";
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
+
   display: inline-block;
   width: 56px;
   height: 56px;
@@ -157,6 +162,7 @@
 
 .field__input--checkbox:checked ~ .field__tick-icon {
   position: absolute;
+  top: 16px;
   left: 16px;
 
   display: block;
@@ -360,6 +366,7 @@
     }
 
     &--radio {
+      width: 100%;
       margin: 0 0 22px;
     }
 
@@ -391,6 +398,10 @@
   }
 
   .field__label-name {
+
+    &--radio {
+      width: 280px;
+    }
 
     &--checkbox {
       margin-right: 0;
